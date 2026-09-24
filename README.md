@@ -22,6 +22,8 @@ AIを使って業務をどう再設計し、成果につなげるかを扱うプ
 
 詳細は [docs/PROJECT_CONCEPT.md](docs/PROJECT_CONCEPT.md) を参照してください。
 
+想定読者とポジショニングの仮説は [docs/AUDIENCE_POSITIONING.md](docs/AUDIENCE_POSITIONING.md) に整理しています。
+
 ## Status
 
 Concept / early stage.

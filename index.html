@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="複雑な業務にAIをどう組み込み、運用できる形まで設計するかを扱うポートフォリオサイト。">
+  <title>AI Business Transformation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">AI Business Transformation</a>
+    <nav aria-label="主要ナビゲーション">
+      <a href="#focus">Focus</a>
+      <a href="#method">Method</a>
+      <a href="#cases">Cases</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">AI × BPR × GOVERNANCE</div>
+      <h1>AIを入れる前に、<br>業務を設計する。</h1>
+      <p class="lead">
+        複雑で間違いにくい業務へAIを組み込むには、ツール選定より先に、
+        業務の分解、標準化、人間による確認、失敗時の運用まで設計する必要があります。
+      </p>
+      <div class="hero-actions">
+        <a class="text-link" href="#cases">ケースを見る <span aria-hidden="true">→</span></a>
+        <a class="text-link muted" href="https://github.com/Josh-Temple/ai-business-transformation">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="signal-strip" aria-hidden="true">
+        <span class="signal signal-red"></span>
+        <span class="signal signal-blue"></span>
+        <span class="signal signal-yellow"></span>
+      </div>
+    </section>
+
+    <section class="intro ruled-section">
+      <p class="section-kicker">Positioning</p>
+      <div class="split">
+        <h2>AI導入そのものではなく、<br>業務上の意思決定を改善する。</h2>
+        <div class="body-copy">
+          <p>
+            行政・制度業務で得た実務知見を起点に、AIを複雑で正確性が求められる業務へ
+            どう組み込むかを考えます。
+          </p>
+          <p>
+            技術の紹介ではなく、どこにAIを使うか、何を人に残すか、いつ止めるか、
+            何を測るかまでを一つの設計として扱います。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="ruled-section">
+      <p class="section-kicker">Decision Focus</p>
+      <h2>最初に考える4つの判断</h2>
+
+      <div class="decision-list">
+        <article class="decision-row">
+          <div class="decision-no">01</div>
+          <h3>どの業務にAIを使うか</h3>
+          <p>頻度、変動性、誤りの影響、入力品質、説明責任から、適用範囲を決める。</p>
+        </article>
+        <article class="decision-row">
+          <div class="decision-no">02</div>
+          <h3>先に業務を再設計すべきか</h3>
+          <p>例外だらけの業務をそのまま自動化せず、標準化・入力設計・責任分界を先に整える。</p>
+        </article>
+        <article class="decision-row">
+          <div class="decision-no">03</div>
+          <h3>何を人間に残すか</h3>
+          <p>全件確認ではなく、誤りの影響と検出可能性に応じてhuman-in-the-loopを配置する。</p>
+        </article>
+        <article class="decision-row">
+          <div class="decision-no">04</div>
+          <h3>何を成果として測るか</h3>
+          <p>削減時間だけでなく、再作業、例外処理、品質、運用負荷、判断速度まで含めて評価する。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="method" class="ruled-section">
+      <p class="section-kicker">Method</p>
+      <div class="split">
+        <h2>技術 → 運用 → 実装ではなく、<br>業務 → 条件 → 実装。</h2>
+        <ol class="method-list">
+          <li><span>業務を分解する</span><p>判断、入力、処理、例外、承認、記録を分ける。</p></li>
+          <li><span>選択肢を比較する</span><p>生成AI、従来型自動化、人間、既存システムを使い分ける。</p></li>
+          <li><span>失敗条件を先に決める</span><p>精度、権限、入力不足、再実行、監査の境界を固定する。</p></li>
+          <li><span>小さく検証する</span><p>PoCの成功ではなく、本番へ進める条件を確かめる。</p></li>
+          <li><span>運用で評価する</span><p>品質と効果だけでなく、人間の負担と復旧可能性も測る。</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="cases" class="ruled-section">
+      <p class="section-kicker">Selected Cases</p>
+      <h2>実装から得た知見を、再利用できる判断基準へ。</h2>
+
+      <div class="case-list">
+        <article class="case-row">
+          <div>
+            <p class="case-type">DOMAIN / OPERATIONS</p>
+            <h3>Kaigo Rules</h3>
+          </div>
+          <p>
+            複雑な制度文書を、根拠・変更履歴・独立検証を保ちながら構造化する試み。
+            「AIが答える」だけでなく、正確性をどう運用で担保するかを扱う。
+          </p>
+          <a class="text-link" href="https://kaigo-rules.vercel.app/">サイトを見る <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="case-row">
+          <div>
+            <p class="case-type">AI ENGINEERING / EXPERIMENTATION</p>
+            <h3>Studio Lab Research</h3>
+          </div>
+          <p>
+            AIエージェントを研究・検証へ使う際の状態管理、反証、再実行、human reviewを実験。
+            成功だけでなく、HOLDやnegative resultも研究判断として残す。
+          </p>
+          <a class="text-link" href="https://josh-temple.github.io/studio-lab-research/">サイトを見る <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="ruled-section about">
+      <p class="section-kicker">About</p>
+      <div class="split">
+        <h2>制約の強い業務を、<br>実装可能な形へ落とす。</h2>
+        <div class="body-copy">
+          <p>
+            公共部門で、制度対応、標準化、電子申請、業務自動化、委託運用などの改善に取り組んできました。
+            その経験を、AI/DXの観点から再解釈し、他の組織でも使える条件へ一般化します。
+          </p>
+          <p>
+            このサイトでは、AIの能力そのものより、業務へ組み込んだときに何が壊れ、
+            どこに人間の判断を残し、どう検証すべきかを重視します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <p class="section-kicker">Current Build</p>
+      <h2>次は、判断基準をケースと記事で実証する。</h2>
+      <p>
+        初期版では、業務選定、標準化、human-in-the-loop、効果測定を中心に、
+        実例と外部根拠を組み合わせたコンテンツを順次追加します。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>AI Business Transformation</span>
+    <span>Portfolio / Research in progress</span>
+  </footer>
+</body>
+</html>

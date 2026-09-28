@@ -24,8 +24,20 @@ AIを使って業務をどう再設計し、成果につなげるかを扱うプ
 
 想定読者とポジショニングの仮説は [docs/AUDIENCE_POSITIONING.md](docs/AUDIENCE_POSITIONING.md) に整理しています。
 
+## Site
+
+初期サイト実装を開始しました。
+
+- `index.html`: ポートフォリオのトップページ
+- `styles.css`: Baukasten系のタイポグラフィ主体のレスポンシブデザイン
+
+初期版では、次の順に内容を厚くします。
+
+1. 業務選定・標準化・human-in-the-loop・効果測定の判断基準
+2. Kaigo Rules / Studio Lab Research を使ったケーススタディ
+3. 旗艦Insight / Methodコンテンツ
+4. 実務で使えるTemplate / Tool
+
 ## Status
 
-Concept / early stage.
-
-サイト名、情報設計、技術構成、公開コンテンツは今後検討します。
+Site foundation / early content build.

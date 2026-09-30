@@ -19,6 +19,30 @@ body {
   letter-spacing: 0.01em;
 }
 a { color: inherit; }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+.method-resource { margin-top: 48px; max-width: 760px; }
+.method-page { max-width: 900px; }
+.method-intro { padding: 80px 0; }
+.method-intro h1 { font-size: clamp(2.4rem, 6vw, 5rem); line-height: 1.2; letter-spacing: -0.04em; }
+.method-page section h2 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.3; }
+.method-page p, .method-page li { overflow-wrap: anywhere; }
+.evidence-note { border-left: 3px solid var(--blue); padding-left: 20px; margin: 32px 0; }
+.review-list { border-top: 1px solid var(--line); margin-top: 32px; }
+.review-list label { display: block; padding: 24px 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+.review-list input { width: 20px; height: 20px; accent-color: var(--blue); vertical-align: middle; }
+.review-list span { display: block; margin: 10px 0 0 30px; color: var(--muted); }
+.record-lines { margin-top: 32px; }
+.evidence-entry { border-bottom: 1px solid var(--line); padding: 24px 0; }
+@media print {
+  body { background: white; color: black; }
+  .site-header nav, footer, .method-resource { display: none; }
+  main, .method-page { width: 100%; max-width: none; }
+  .method-intro, .ruled-section { padding: 24px 0; }
+  .method-intro h1 { font-size: 26pt; }
+  .method-page section h2 { font-size: 20pt; }
+  .review-list label, .evidence-entry { break-inside: avoid; }
+  .record-lines p { white-space: normal; }
+}
 .site-header {
   width: min(calc(100% - 40px), var(--max));
   margin: 0 auto;

@@ -33,16 +33,7 @@ a:focus-visible, input:focus-visible { outline: 3px solid var(--blue); outline-o
 .review-list span { display: block; margin: 10px 0 0 30px; color: var(--muted); }
 .record-lines { margin-top: 32px; }
 .evidence-entry { border-bottom: 1px solid var(--line); padding: 24px 0; }
-@media print {
-  body { background: white; color: black; }
-  .site-header nav, footer, .method-resource { display: none; }
-  main, .method-page { width: 100%; max-width: none; }
-  .method-intro, .ruled-section { padding: 24px 0; }
-  .method-intro h1 { font-size: 26pt; }
-  .method-page section h2 { font-size: 20pt; }
-  .review-list label, .evidence-entry { break-inside: avoid; }
-  .record-lines p { white-space: normal; }
-}
+
 .site-header {
   width: min(calc(100% - 40px), var(--max));
   margin: 0 auto;
@@ -248,4 +239,15 @@ footer {
   section h2 { font-size: clamp(2rem, 11vw, 3.8rem); }
   footer { display: block; }
   footer span { display: block; margin-bottom: 8px; }
+}
+
+@media print {
+  body { background: white; color: black; }
+  .site-header nav, footer, .method-resource { display: none; }
+  main, .method-page { width: 100%; max-width: none; }
+  .method-intro, .ruled-section { padding: 24px 0; }
+  .method-intro h1 { font-size: 26pt; }
+  .method-page section h2 { font-size: 20pt; }
+  .review-list label, .evidence-entry { break-inside: avoid; }
+  .record-lines p { white-space: normal; }
 }

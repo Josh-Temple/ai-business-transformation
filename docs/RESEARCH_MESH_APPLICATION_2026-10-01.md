@@ -48,21 +48,28 @@ Heroの「AIを入れる前に、業務を設計する」は変更しない。�
 
 Q029は、短期pilotで観測された個人・task-levelの生産性向上を、継続的な組織ROIやservice-level改善へどこまで外挿できるかを研究している。
 
-2026-10-01時点で、protocol v1に対するScout/Criticの独立攻撃は `SUPPORT_WITH_LIMITS`。少なくとも次の修正が必要とされている。
+2026-10-01 21:12 JST時点で、Scout/Criticによるprotocol v1への独立攻撃を受けたimmutable protocol v2が固定された。v2では、実質synthesis前の評価設計として次を明示している。
 
-- realization horizon / outcome lagを独立した評価軸または主要moderatorとして扱う
-- adoption / denominator evidenceを `BOUNDARY_ONLY` としてoutcome-path evidenceから分ける
-- evidence hierarchyをclaim-specificに扱う
-- positive/negative case balanceを証拠の重み付けではなくsearch/stop ruleとして扱う
+- pilotと本番のtask / worker mixの対応
+- ordinary-useでのadoption / utilization
+- quality / rework / service outcome
+- review / coordination / handoff burden
+- saved capacityを価値へ転換できるかとimplementation / operating cost
+- realization horizon / outcome lag
+- adoption・denominator等の `BOUNDARY_ONLY` evidenceを、causal outcome-path evidenceから分離
+- evidence hierarchyをclaim-specificに扱い、positive/negative case balanceをsearch/stop ruleとして扱う
 
 主要なdurable receipt：
 
-- `/Studio Lab Optimization/Run Journal/20261001T2016JST_OPT_EXPERIMENTER_Q029_PROTOCOL_FREEZE.md`
+- `/Studio Lab Optimization/Run Journal/20261001T2112JST_OPT_EXPERIMENTER_Q029_PROTOCOL_V2_FREEZE.md`
+- `/Studio Lab Optimization/Experiments/q029_pilot_to_scale_synthesis_protocol_v2.md`
 - `/Studio Lab Optimization/Run Journal/20261001T2026JST_OPT_SCOUT_CRITIC_Q029_PROTOCOL_COUNTEREVIDENCE.md`
 
-現時点ではsubstantiveなpilot-to-ROI transfer rule、普遍的なadoption率・期間・task share・review burden・ROI閾値は成立していない。そのためQ029を根拠とする公開Methodや確定的なサイト本文は今回追加しない。
+ただし、protocol v2は研究設計の固定であり、substantiveなQ029 conclusionではない。現時点ではpilot-to-ROI transfer rule、普遍的なadoption率・期間・task share・review burden・ROI閾値は成立していない。次のResearch Mesh上の有効transitionは、exact v2に対する独立Scout/Critic reviewであり、その後に必要なindependent verificationを通過してからsynthesisへ進む。
 
-次に反映を検討するのは、protocol v2、substantive synthesis、独立検証、Integratorのbounded conclusionまで進んだ後とする。
+今回のRepository反映では、上記を確定的な因果則として扱わない。一方、Decision Focus 04の「何を成果として測るか」は、単一の速度指標だけに依存しない評価設計を示す実務上の提案として、実利用率、品質・再作業、レビュー・連携負荷、価値への転換、効果発現までの期間を分けて測る表現へ更新する。この文言はQ029の実質結論を主張するものではなく、現在のprotocolが分離して扱っている評価変数を、サイトの既存Method思想へ反映したものである。
+
+専用Method「PoCの成果を、どこまで本番効果へ外挿できるか」は、Q029がsubstantive synthesis、独立検証、Integratorのbounded conclusionまで到達するまで作成しない。
 
 ## 検証と公開判断
 

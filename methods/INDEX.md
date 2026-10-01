@@ -18,6 +18,18 @@ AI Business Transformation のMethodコンテンツへ到達するための薄�
   - 特定組織・自治体・業界の事実の正本
   - 「チェック項目を満たせば安全」という普遍的な合格基準
 
+## Research support records
+
+Methodへ昇格する前のResearch Mesh由来の適用判断を、current stateとは分離したsnapshotとして記録する。
+
+- `docs/RESEARCH_MESH_APPLICATION_2026-09-30.md`
+  - Q020/Q021/Q025/Q026を中心に、初回のEvidence to Operation Methodへ何を採用・不採用にしたか。
+- `docs/RESEARCH_MESH_APPLICATION_2026-10-02.md`
+  - Q028/Q029、Q025+Q026のESTABLISHED reusable finding、Q030の未昇格判断。
+  - PoC→組織成果、workflow redesign、evaluation boundary、skill retentionの境界を記録。
+
+これらはResearch Meshの最新runやBoard状態の正本ではない。現在状態が必要な場合はResearch Mesh側のcanonical sourcesをfresh確認する。
+
 ## Routing rule
 
 1. 個別組織・制度・調達・研究の事実は、そのdomain repositoryで確認する。

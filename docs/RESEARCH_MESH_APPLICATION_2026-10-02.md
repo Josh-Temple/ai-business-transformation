@@ -190,7 +190,80 @@ Q030は「短期生産性と、人間の技能習得・維持をどう両立す�
 
 ---
 
-## 7. この時点でのGitHub側の扱い
+## 7. Q031 — synthetic / real の二択ではなく「何を推定するか」でEvidenceを選ぶ
+
+status: **BOUNDED VERIFIED**
+
+Q031は、生成AIシステムを導入前・変更後に評価する際、実データが必要な場合と、synthetic data / generated test casesで代替できる場合を扱った。
+
+独立Verifier / Integratorで限定的に成立した結論は、**syntheticかrealかを一律に順位付けするのではなく、評価したい性質・推定対象に応じてEvidenceを選ぶ**というもの。
+
+### synthetic / generated casesをprimary evidenceにし得る範囲
+
+- deterministic conformance
+- 既知failureの識別
+- 事前定義したrare-case coverage
+
+自然発生頻度や実運用contextそのものを推定対象にしていない場合、構成したケースをprimaryにできる。
+
+### real operational / user evidenceが必要になりやすい範囲
+
+- target distributionへのgeneralization
+- failureやcaseのprevalence / frequency
+- drift
+- human / workflow interaction
+- deployed performanceが時間をまたいで維持されるか
+
+ここでは代表性・currentnessを別途正当化したreal-distribution / temporal / operational / user evidenceが必要になる。
+
+重要なのは、**real dataであること自体はEvidence qualityを保証しない**こと。古い・偏った・対象母集団とずれた実データは、主張したい推定対象を十分に支えない。一方、synthetic dataはrare caseを構成できても、そのcaseが実環境でどれだけ起きるかのEvidenceにはならない。
+
+### AI Business Transformationへの含意
+
+PoC・benchmark・回帰試験を設計するときは、「real dataを使っているか」ではなく先に次を明示する。
+
+1. 何を推定・確認したいのか
+2. そのclaimに必要なdistribution / temporal / human / workflow contextは何か
+3. syntheticで十分な部分とreal evidenceが必要な部分を分けられるか
+4. real evidenceの代表性・currentnessをどう確認するか
+
+これは、検証コストを抑えながらも、syntheticで検証できないclaimを無理に一般化しないための設計原則として再利用価値が高い。
+
+### 未成立
+
+- 普遍的なsynthetic / real比率
+- 万能のsample size / risk threshold
+- 特定の組織評価policyの因果的優越性
+- finiteなsynthetic / real datasetによる未知failureの完全発見
+- real datasetの将来にわたる代表性保証
+- あらゆる用途でcontinuous refreshが必要という一般則
+- この知見だけから本番安全性や導入許可を決めること
+
+---
+
+## 8. Q032 — 監視・停止・rollback研究はまだ成果として昇格しない
+
+status: **FROZEN_PREEXECUTION / NOT PROMOTED**
+
+Q032は、生成AI導入後にどの監視・フィードバック信号を使い、model / prompt / RAG / workflowの変更・停止・rollbackを判断するかを扱う。
+
+2026-10-02 16:11 JST時点でprotocol v1は事前凍結されているが、Evidence executionはまだ行われておらず、独立protocol review待ちである。
+
+したがって現時点では、
+
+- universalなmonitoring metric set
+- cadence
+- numeric threshold
+- rollback rule
+- staged monitoringがflat thresholdより優れているという結論
+
+をGitHub側の再利用知見としては採用しない。
+
+この研究は、独立Verifier / Integratorでbounded resultが成立した後に、必要なら別の更新で昇格する。
+
+---
+
+## 9. この時点でのGitHub側の扱い
 
 ### すぐ再利用してよい
 
@@ -203,9 +276,13 @@ Q030は「短期生産性と、人間の技能習得・維持をどう両立す�
 3. **evaluation boundaryをend-to-endで固定する**
    Q025/Q026のESTABLISHED reusable findingを、Evidence to Operation Methodの根拠更新候補にする。
 
+4. **評価Evidenceを推定対象から選ぶ**
+   Q031のbounded verified findingを、PoC・benchmark・回帰試験でsynthetic / real dataを使い分ける設計原則として再利用する。
+
 ### まだ昇格しない
 
 - Q030のskill retention一般則
+- Q032のmonitoring / stop / rollback一般則（protocol review段階）
 - universal human-review allocation rule
 - RAGの普遍的な原典確認省略条件
 - workflow redesignの数値threshold
@@ -213,7 +290,7 @@ Q030は「短期生産性と、人間の技能習得・維持をどう両立す�
 
 ---
 
-## 8. Research Meshとの境界
+## 10. Research Meshとの境界
 
 この文書はResearch Meshのoperational stateをGitHubへ複製するものではない。
 

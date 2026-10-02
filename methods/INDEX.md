@@ -25,8 +25,9 @@ Methodへ昇格する前のResearch Mesh由来の適用判断を、current state
 - `docs/RESEARCH_MESH_APPLICATION_2026-09-30.md`
   - Q020/Q021/Q025/Q026を中心に、初回のEvidence to Operation Methodへ何を採用・不採用にしたか。
 - `docs/RESEARCH_MESH_APPLICATION_2026-10-02.md`
-  - Q028/Q029、Q025+Q026のESTABLISHED reusable finding、Q030の未昇格判断。
-  - PoC→組織成果、workflow redesign、evaluation boundary、skill retentionの境界を記録。
+  - Q028/Q029、Q025+Q026のESTABLISHED reusable finding、Q030の未昇格判断、Q031のbounded verified finding。
+  - PoC→組織成果、workflow redesign、evaluation boundary、skill retention、synthetic / real evidence selectionの境界を記録。
+  - Q032はpre-execution段階のため、monitoring / stop / rollback一般則としては未昇格。
 
 これらはResearch Meshの最新runやBoard状態の正本ではない。現在状態が必要な場合はResearch Mesh側のcanonical sourcesをfresh確認する。
 

@@ -23,18 +23,21 @@ Research Meshで得られた成果のうち、AI導入・BPR・評価設計の�
 
 status: **BOUNDED VERIFIED**
 
-Research Meshで成立した範囲では、短期のtask-levelな生成AI効果が、より広いservice / workforce outcomeへ移る可能性は、少なくとも次の条件と関係する。
+独立Verifier / Integratorが検証したのは、採用した研究の範囲に限る条件付きの証拠整理である。**観測された成果、説明候補、未成立事項を分けて使う。**
 
-- pilotと本番でtask / populationが大きくずれていない
-- ordinary useが実際に起きている
-- speedだけでなくquality / service outcomeも改善している
-- review / coordination burdenが大きく増えていない
-- 節約されたcapacityを組織が実際に回収・再配分できる
-- 観測期間が、評価したい成果の発現まで十分かを分けて考える
+### 観測された範囲
 
-一方、個人が処理時間を短縮しても、meetingやcoordination-heavy workが変わらない、追加のoversight / integration workが発生する、またはsaved capacityが回収されない場合、より広い成果は弱まる、または観測期間内ではnullになり得る。
+- 顧客サポートの一つの導入研究では、速度と品質・サービス／従業員関連の成果が改善した。ただし、企業ROIや全業種への一般化を直接証明するものではない。
+- 別の無作為化フィールド実験では、個人で制御しやすい仕事の変化が観測される一方、連携に依存する仕事の変化は限定的だった。これは価値回収・費用を直接測った結果ではない。
+- 生産性向上の自己申告と、観測期間内の賃金・記録労働時間の明確な変化が確認できない研究もある。ただし、自己申告の局所的生産性を、因果的に測定された作業改善と同一視しない。
 
-この知見は、**「PoCで生産性が上がった = ROIが出る」ではない**ことを示す判断材料として使える。
+### 実務上の確認候補
+
+pilotと本番のtask / populationの対応、通常利用の実現、速度と品質・サービス成果、レビュー・連携負担、節約した時間の回収・再配分、観測期間を分けて確認する。これらは**条件付きの確認項目と説明仮説**であり、全項目の因果効果、必要条件・十分条件、普遍的な導入判断則が検証されたわけではない。
+
+特に、連携負担や節約時間の価値化を、各研究が直接測定・因果分離したと読まない。追加のvalue-capture研究系列は、正負両方向の採用条件を満たす証拠が揃わず **BOUNDED INCONCLUSIVE** で閉じた。先行する限定的知見は保持するが、「時間短縮が利益へ変換される条件」を確定したとは扱わない。
+
+この知見は、**PoCでの作業改善から組織ROIを自動的に推論しない**ための判断材料として使える。
 
 ### 主な外部根拠
 
@@ -157,7 +160,7 @@ deterministic generatorをreviewerが読める場合、realized evaluation rows�
 
 ## 6. Q030 — skill retentionは有望なテーマだが、まだ公開知見へ昇格しない
 
-status: **OPEN / NOT PROMOTED**
+status: **BOUNDED INCONCLUSIVE / GENERAL RULE NOT PROMOTED**
 
 Q030は「短期生産性と、人間の技能習得・維持をどう両立するか」を扱う。
 
@@ -183,7 +186,7 @@ Q030は「短期生産性と、人間の技能習得・維持をどう両立す�
 
 という一般則へ昇格しない。
 
-今後、独立Verifier / Integratorでbounded resultが閉じた後に、必要なら別の公開Research Note / Methodへ昇格する。
+10月2日10:48 JSTの独立Verifier / Integrator統合で、現在の職場A-vs-B系列はBOUNDED INCONCLUSIVEとして閉じた。これは利用方法の優越性が同等という証明ではない。再開は、利用モードを直接区別し、支援中の成果と後続のAIなし遂行能力を同時測定する、実質的に異なる職場・専門実務の根拠が得られた場合に限る。
 
 ---
 

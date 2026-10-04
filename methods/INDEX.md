@@ -28,6 +28,9 @@ Methodへ昇格する前のResearch Mesh由来の適用判断を、current state
   - Q028/Q029、Q025+Q026のESTABLISHED reusable finding、Q030の未昇格判断、Q031のbounded verified finding。
   - PoC→組織成果、workflow redesign、evaluation boundary、skill retention、synthetic / real evidence selectionの境界を記録。
   - Q032はpre-execution段階のため、monitoring / stop / rollback一般則としては未昇格。
+- `docs/RESEARCH_MESH_APPLICATION_2026-10-05.md`
+  - Research Meshで実際に起きたidentity / lineage conflictから、versioned historyでの訂正、stable_id / run_id / provenanceの分離、exact-match correction、clean rekey、fail-closed、reader側更新まで含むmigration完了条件を整理。
+  - current Boardやscheduled task状態は複製せず、複数AI・自動化へ再利用できる設計知見とnegative knowledgeだけを記録。
 
 これらはResearch Meshの最新runやBoard状態の正本ではない。現在状態が必要な場合はResearch Mesh側のcanonical sourcesをfresh確認する。
 
